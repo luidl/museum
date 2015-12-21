@@ -1,0 +1,26 @@
+<ion-view view-title="Exponate">
+  <ion-content padding="'true'" class="has-header" on-swipe-left="minusEins()">
+   <h1>Exponate</h1>
+   <ion-refresher
+            pulling-text="Zum Aktualisieren ziehen ..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-list ng-repeat="exhibit in exhibits.exhibits.exhibits | orderBy:'nid'">
+         <ion-item menu-close="" class="item-thumbnail-left" href="#/app/exhibit/{{exhibit.nid}}">
+            <img ng-bind-html="exhibit.bild"></img>
+            <h2>{{exhibit.titel}}</h2>
+            <p>{{exhibit.text}}</p>
+            <p>ID: {{exhibit.nid}}</p>
+         </ion-item>
+        </ion-list>
+    <div class = "zahl">
+        {{number}}
+    </div>
+   <div>  
+    <button ng-click = "minusEins()" class="button button-positive"> - 1 </button>
+    <button ng-click = "Reset()" class="button button-assertive"> =0 </button>
+    <button ng-click = "plusEins()" class="button button-positive"> + 1 </button>
+   </div>  
+   </ion-content>
+</ion-view>
