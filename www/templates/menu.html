@@ -14,42 +14,42 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Museum Mensch + Natur</h1>
+      <h1 class="title">Navigation</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/start">
-          Startseite
+          <span class="icon-m icon-m-home icon-m-secondary"></span> {{ 'HOME' | translate }}
         </ion-item>
-        <ion-item menu-close href="#/app/map">
+        <!--<ion-item menu-close href="#/app/map">
           Lageplan
-        </ion-item>
+        </ion-item>-->
         <ion-item menu-close href="#/app/news">
-          Aktuelles
+          <span class="icon-m icon-m-news icon-m-secondary"></span> {{ 'NEWS' | translate }}
         </ion-item>
-        <ion-item menu-close href="#/app/exhibitions">
-          Ausstellungen
+        <ion-item menu-close href="#/app/departments">
+          <span class="icon-m icon-m-exhibit icon-m-secondary"></span> {{ 'DEPARTMENTS' | translate }}
         </ion-item>
-        <ion-item menu-close href="#/app/routes">
-          Routen
-        </ion-item>
-        <ion-item menu-close href="#/app/guides">
-          Führungen
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
+        <!--<ion-item menu-close href="#/app/routes">
+          <span class="icon-m icon-m-rout icon-m-secondary"></span> Routen
+        </ion-item>-->
+       <!-- <ion-item menu-close href="#/app/guides">
+          <span class="icon-m icon-m-tours icon-m-secondary"></span> Führungen
+        </ion-item>-->
+        <!--<ion-item menu-close href="#/app/search">
           Suche
+        </ion-item>-->
+         <ion-item menu-close href="#/app/scan-exhibit">
+           <span class="icon-m icon-m-scan icon-m-secondary"></span> {{ 'SCAN_EXHIBIT' | translate }}
         </ion-item>
-         <ion-item menu-close href="#/app/exhibits">
-          Exponate
+       <!--<ion-item menu-close href="#/app/quiz">
+          <span class="icon-m icon-m-quiz icon-m-secondary"></span> Quiz
+        </ion-item>-->
+        <ion-item menu-close href="#/app/infos">
+          <span class="icon-m icon-m-home icon-m-secondary"></span> {{ 'INFORMATIONS' | translate }}
         </ion-item>
-       <ion-item menu-close href="#/app/quiz">
-          Quiz
-        </ion-item>
-        <ion-item menu-close href="#/app/info">
-          Museumsinfos
-        </ion-item>
-        <ion-item menu-close ng-click="login()">
-          Login
+        <ion-item menu-close href="#/app/language-selector">
+          <span class="icon-m ion-icon ion-chatbox icon-m-secondary"></span> {{ 'Change Language' | translate }}
         </ion-item>
       </ion-list>
     </ion-content>

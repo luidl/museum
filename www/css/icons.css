@@ -1,0 +1,120 @@
+.icon-m, .button-m, .icon-m-primary, .icon-m-secondary {
+  display: inline-block;
+  width: 2em !important;
+  height: 0;
+  padding-bottom: 2em;
+  border-radius: 1em;
+  background-image: url(../img/icons-white.png);
+  background-size: 600%;
+  margin-bottom: -0.6em; }
+
+.icon-m-block {
+  display: block;
+  margin-bottom: 0; }
+
+.button-m {
+  background-image: none;
+  position: relative;
+  width: 2em;
+  /* desired width */ }
+  .button-m span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 35px;
+    font-size: 35px;
+    margin: auto;
+    text-align: center; }
+  .button-m:before {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+
+a:hover .icon-m, a:hover .button-m, a:hover .icon-m-primary, a:hover .icon-m-secondary {
+  background-image: url(../img/icons-white.png); }
+
+/**
+ * DIFFERENT COLORS
+ */
+.icon-m-primary {
+  background-image: url(../img/icons-primary.png);
+  color: #791422; }
+
+.icon-m-secondary {
+  background-image: url(../img/icons-secondary.png);
+  color: #FD9D02; }
+
+/**
+ * Combined with glyphicons
+ */
+.icon-m.glyphicon, .glyphicon.button-m, .glyphicon.icon-m-primary, .glyphicon.icon-m-secondary {
+  background-image: none;
+  text-align: center;
+  font-size: 2em;
+  padding: 30px 0 -28em; }
+
+a:hover .icon-m.glyphicon, a:hover .glyphicon.button-m, a:hover .glyphicon.icon-m-primary, a:hover .glyphicon.icon-m-secondary {
+  background-image: none; }
+
+.ion-icon.icon-m, .ion-icon.button-m, .ion-icon.icon-m-primary, .ion-icon.icon-m-secondary {
+  width: auto !important;
+  padding-bottom: 0;
+  background-image: none;
+  text-align: center;
+  font-size: 2em; }
+
+a:hover .icon-m.ion-icon, a:hover .ion-icon.button-m, a:hover .ion-icon.icon-m-primary, a:hover .ion-icon.icon-m-secondary {
+  background: none; }
+
+.icon-m-news {
+  background-position: 0% 0%; }
+
+.icon-m-home {
+  background-position: -100% 0%; }
+
+.icon-m-map {
+  background-position: -200% 0%; }
+
+.icon-m-exhibit {
+  background-position: -300% 0%; }
+
+.icon-m-tours {
+  background-position: -400% 0%; }
+
+.icon-m-routs {
+  background-position: -500% 0%; }
+
+.icon-m-scan {
+  background-position: 0% -100%; }
+
+.icon-m-quiz {
+  background-position: -100% -100%; }
+
+.icon-m-r23 {
+  background-position: -200% -100%; }
+
+.icon-m-r24 {
+  background-position: -300% -100%; }
+
+.icon-m-r25 {
+  background-position: -400% -100%; }
+
+.icon-m-r26, .icon-m-weitere {
+  background-position: -500% -100%; }
+
+.icon-m-schild-r31 {
+  background-position: 0% -300%; }
+
+.icon-m-schild-r32 {
+  background-position: -100% -300%; }
+
+.icon-m-schild-r34 {
+  background-position: -200% -300%; }
+
+.icon-m-schild-r35 {
+  background-position: -300% -300%; }
+
+/*# sourceMappingURL=icons.css.map */

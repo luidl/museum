@@ -95,6 +95,16 @@ angular.module("museum")
           }
         return data.data;
     }
+
+    /**
+     * CLEAR ALL SOTRED INFORMATION
+     */
+    service_object.clear = function() {
+        console.log("Befor Clear: ", window.localStorage);
+        window.localStorage.clear();
+        key_settings = {};
+        console.log("after Clear: ", window.localStorage);
+    }
     
     
     return service_object;

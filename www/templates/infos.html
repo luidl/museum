@@ -1,0 +1,12 @@
+<ion-view view-title="{{ 'INFORMATIONS' | translate }}">
+     <ion-content padding="'true'" class="has-header">
+
+         <div class="list">
+             <a ng-repeat="info in infos.data" class="item item-icon-right" href="#/app/infos/{{info.nid}}">
+                 <h2 ng-bind-html="info.title"></h2>
+             </a>
+
+         </div>
+
+  </ion-content>
+</ion-view>

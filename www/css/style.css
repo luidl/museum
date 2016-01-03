@@ -1,8 +1,41 @@
-/* Empty. Add your own CSS if you like */
+/**
+ * SIDEMENU
+ */
+ion-side-menu ion-content {
+  background: #706259; }
+ion-side-menu .list .item-complex .item-content {
+  background: #706259;
+  color: #fff; }
 
-.zahl {
-    font-size: 40px;
-    text-align: left;
-    padding: 30px;
+/**
+ * GENERAL CONTENT
+ */
+ion-content {
+  background: #F7EFE5; }
 
-}
+.bar.bar-stable {
+  background: #791422; }
+  .bar.bar-stable .title {
+    color: #fff; }
+  .bar.bar-stable .button.button-clear {
+    color: #fff; }
+
+/**
+ * SPEZIFIC CONTENT
+ */
+a.mbutton {
+  display: block;
+  height: 150px;
+  background: #791422;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none; }
+  a.mbutton .home-icon {
+    font-size: 50px;
+    text-align: center; }
+    a.mbutton .home-icon .icon-m {
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */

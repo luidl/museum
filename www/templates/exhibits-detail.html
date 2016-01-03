@@ -1,0 +1,38 @@
+<ion-view view-title="Exponat">
+  <ion-content padding="'true'" class="has-header">
+      <div class="list card">
+
+          <div class="item">
+              <h2>{{exhibit.titel}}</h2>
+          </div>
+
+          <div class="item item-image">
+              <img ng-src="{{exhibit.image}}">
+          </div>
+
+          <a class="item">
+              {{exhibit.text}}
+          </a>
+
+      </div>
+      <h2 ng-if="sub_exhibits.length > 0">Weitere Informationen</h2>
+
+      <div class="list card" ng-repeat="sub in sub_exhibits">
+
+          <div class="item">
+              <h2>{{sub.title}}</h2>
+              <p>{{sub.field_exhibit_description_short}}</p>
+          </div>
+
+          <div class="item item-image">
+              <img ng-src="{{sub.field_exhibit_image}}">
+          </div>
+
+          <a class="item item-text-wrap">
+              <p ng-bind-html="sub.field_exhibit_description"></p>
+          </a>
+
+      </div>
+
+   </ion-content>
+</ion-view>

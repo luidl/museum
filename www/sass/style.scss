@@ -1,0 +1,71 @@
+$primary_color: #791422;
+$secondary_color: #FD9D02;
+$background_one: #706259;
+$background_two: #F7EFE5;
+
+
+/**
+ * SIDEMENU
+ */
+ion-side-menu {
+  ion-content {
+    background: $background_one;
+  }
+
+  .list {
+
+
+    .item-complex .item-content {
+      background: $background_one;
+      color: #fff;
+    }
+  }
+}
+
+
+/**
+ * GENERAL CONTENT
+ */
+ion-content {
+  background: $background_two;
+}
+
+.bar.bar-stable {
+  background: $primary_color;
+
+  .title {
+    color: #fff;
+  }
+
+  .button.button-clear {
+    color: #fff;
+  }
+
+}
+
+
+
+/**
+ * SPEZIFIC CONTENT
+ */
+
+//START SITE
+a.mbutton {
+  display: block;
+  height: 150px;
+  background: $primary_color;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  .home-icon {
+    font-size: 50px;
+    text-align: center;
+
+    .icon-m {
+      margin-bottom: 0;
+    }
+  }
+}

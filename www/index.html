@@ -6,6 +6,7 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -14,8 +15,11 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+      <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ng-cordova/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
@@ -23,30 +27,23 @@
     <script src="js/controllers.js"></script>
     <script src="js/settings.js"></script>
 
-    <script src="js/controllers/exhibitsController.js"></script>
+    <!-- SERVICES -->
+      <script src="js/services/storageService.js"></script>
+      <script src="js/services/visitorService.js"></script>
     <script src="js/services/exhibitService.js"></script>
-    <script src="js/services/storageService.js"></script>
-      
-          <!-- Services -->
-<!--
-    <script src="js/services/settings.js"></script>
-    <script src="js/services/storageService.js"></script>
-    <script src="js/services/userService.js"></script>
-    <script src="js/services/mvgService.js"></script>
--->
+    <script src="js/services/departmentsService.js"></script>
+      <script src="js/services/infosService.js"></script>
 
-    <!-- Filter -->
-<!--
-    <script src="js/filters/angular-filter.js"></script>
-    <script src="js/filters/timeLeftFilter.js"></script>
--->
+    <!-- CONTROLLERS -->
+    <script src="js/controllers/languageSelectorController.js"></script>
+    <script src="js/controllers/exhibitsController.js"></script>
+    <script src="js/controllers/exhibitsDetailController.js"></script>
+    <script src="js/controllers/departmentsController.js"></script>
+    <script src="js/controllers/departmentsDetailController.js"></script>
+      <script src="js/controllers/infosController.js"></script>
+      <script src="js/controllers/infosDetailController.js"></script>
+      <script src="js/controllers/scanExhibitController.js"></script>
 
-    <!-- Controllers -->
-<!--
-    <script src="js/controllers/appController.js"></script>
-    <script src="js/controllers/mvgController.js"></script>
-    <script src="js/controllers/settingsController.js"></script>
--->
     
   </head>
 

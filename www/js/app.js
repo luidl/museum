@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('museum', ['ionic', 'museum.controllers'])
+angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $state, visitorService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,102 +19,129 @@ angular.module('museum', ['ionic', 'museum.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+      if(!visitorService.getLanguage()) {
+          $state.go("app.language-selector");
+      }
+
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+        prefix: 'translations/',
+        suffix: '.json'
+    });
+
+    $translateProvider.preferredLanguage('de');
+
   $stateProvider
-
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+      })
 
-  .state('app.start', {
-    url: '/start',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/start.html'
-      }
-    }
-  })
+      .state('app.start', {
+        url: '/start',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/start.html'
+          }
+        }
+      })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
+      .state('app.language-selector', {
+          url: '/language-selector',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/language-selector.html',
+                  controller: 'languageSelectorCtrl'
+              }
+          }
+      })
 
-   .state('app.exhibits', {
-      url: '/exhibits',
+       .state('app.exhibits', {
+          url: '/exhibits',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/exhibits.html',
+              controller: 'exhibitsCtrl'
+          }
+          }
+        })
+
+      .state('app.exhibits-detail', {
+          url: '/exhibits/:exhibitId',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/exhibits-detail.html',
+                  controller: 'exhibitsDetailCtrl'
+              }
+          }
+      })
+
+      .state('app.scan-exhibit', {
+          url: '/scan-exhibit',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/scan-exhibit.html',
+                  controller: 'scanExhibitCtrl'
+              }
+          }
+      })
+ 
+     .state('app.departments', {
+          url: '/departments',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/departments.html',
+              controller: 'departmentsCtrl'
+            }
+          }
+        })
+
+    .state('app.departments-detail', {
+      url: '/departments/:departmentId',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/exhibits.html',
-          controller: 'exhibitsCtrl'
-      }
+          'menuContent': {
+              templateUrl: 'templates/departments-detail.html',
+              controller: 'departmentsDetailCtrl'
+          }
       }
     })
- 
- .state('app.exhibitions', {
-      url: '/exhibitions',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/exhibitions.html'
-        }
-      }
-    })
- 
-  .state('app.guides', {
-      url: '/guides',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/guides.html'
-        }
-      }
-    })
- 
-  .state('app.guidelist', {
-      url: '/guidelist',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/guidelist.html'
-        }
-      }
-    })
- 
-  .state('app.virtualguides', {
-      url: '/virtualguides',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/virtualguides.html'
-        }
-      }
-    })
- 
-    .state('app.news', {
-      url: '/news',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/news.html',
+
+      .state('app.news', {
+          url: '/news',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/news.html',
 //          controller: 'NewssCtrl'
+              }
+          }
+      })
+ 
+    .state('app.infos', {
+      url: '/infos',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/infos.html',
+          controller: 'infosCtrl'
         }
       }
     })
 
-   .state('app.grundschueler', {
-      url: '/grundschueler',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/grundschueler.html',
-//          controller: 'NewssCtrl'
-        }
-      }
-    })
+      .state('app.info-detail', {
+          url: '/infos/:infoId',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/infos-detail.html',
+                  controller: 'infosDetailCtrl'
+              }
+          }
+      })
+
 
   .state('app.map', {
     url: '/map',

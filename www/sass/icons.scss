@@ -1,0 +1,135 @@
+
+$primary_color: #791422;
+$secondary_color: #FD9D02;
+$background_one: #706259;
+
+$grau: #595959;
+$weiss: #fff;
+$schwarz: #000;
+
+$icon_size: 2em;
+
+$col: -100%;
+$row: -100%;
+
+.icon-m {
+  display: inline-block;
+  width: $icon_size !important;
+  height: 0;
+  padding-bottom: $icon_size;
+  border-radius: $icon_size/2;
+  background-image: url(../img/icons-white.png);
+  background-size: 600%;
+  margin-bottom: -0.6em;
+}
+
+.icon-m-block {
+  display: block;
+  margin-bottom: 0;
+}
+
+.button-m {
+  @extend  .icon-m;
+  background-image: none;
+  position: relative;
+  width: $icon_size;		/* desired width */
+
+  span {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 35px;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+a:hover .icon-m {
+  //background-color: darken($blau_grau, 5%);
+  background-image: url(../img/icons-white.png);
+}
+
+/**
+ * DIFFERENT COLORS
+ */
+
+.icon-m-primary {
+  @extend  .icon-m;
+  background-image: url(../img/icons-primary.png);
+  color: $primary_color;
+}
+
+.icon-m-secondary {
+  @extend  .icon-m;
+  background-image: url(../img/icons-secondary.png);
+  color: $secondary_color;
+}
+
+
+
+
+
+
+/**
+ * Combined with glyphicons
+ */
+.icon-m.glyphicon {
+  background-image: none;
+  text-align: center;
+  font-size: $icon_size;
+  padding: 30px 0 ($icon_size - 30);
+}
+
+a:hover .icon-m.glyphicon { background-image: none; }
+
+
+.ion-icon.icon-m {
+  width: auto !important;
+  padding-bottom: 0;
+  background-image: none;
+  text-align: center;
+  font-size: $icon_size;
+}
+
+a:hover .icon-m.ion-icon {
+  background: none;
+}
+
+
+
+//                                      COL   | ROW
+// 1 ROW
+.icon-m-news { background-position: $col*0 $row*0 }
+.icon-m-home { background-position: $col*1 $row*0 }
+.icon-m-map { background-position: $col*2 $row*0 }
+.icon-m-exhibit { background-position: $col*3 $row*0 }
+.icon-m-tours { background-position: $col*4 $row*0 }
+.icon-m-routs { background-position: $col*5 $row*0 }
+
+
+// 2 ROW
+.icon-m-scan { background-position: $col*0 $row*1 }
+.icon-m-quiz { background-position: $col*1 $row*1 }
+.icon-m-r23 { background-position: $col*2 $row*1 }
+.icon-m-r24 { background-position: $col*3 $row*1 }
+.icon-m-r25 { background-position: $col*4 $row*1 }
+.icon-m-r26, .icon-m-weitere { background-position: $col*5 $row*1 }
+
+
+// MATERIALIEN SCHILDER
+.icon-m-schild-r31 { background-position: $col*0 $row*3 }
+.icon-m-schild-r32 { background-position: $col*1 $row*3 }
+.icon-m-schild-r34 { background-position: $col*2 $row*3 }
+.icon-m-schild-r35 { background-position: $col*3 $row*3 }
+
+
