@@ -12,7 +12,7 @@ angular.module("museum")
          * Reload the data
          */
         service_object.reloadData = function() {
-          $http.get(serverAddress + restEndpoint + '/exponate/' + visitorService.getLanguageUrl(),
+          $http.get(serverAddress + restEndpoint + '/exponate' + visitorService.getLanguageUrl(),
               {header : {"Content-Type" : "application/json; charset=UTF-8", "Accept-Charset":"charset=utf-8"}})
             .success(function(data) {
                 exhibits.exhibits = data;

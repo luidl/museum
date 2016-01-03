@@ -12,7 +12,7 @@ angular.module("museum")
          * Reload the data
          */
         service_object.reloadData = function() {
-          $http.get(serverAddress + restEndpoint + '/departments/' + visitorService.getLanguageUrl())
+          $http.get(serverAddress + restEndpoint + '/departments' + visitorService.getLanguageUrl())
             .success(function(data) {
                 departments.data = data;
                 storageService.saveData('exhibits', departments);
