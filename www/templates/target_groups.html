@@ -1,0 +1,16 @@
+<ion-view view-title="{{ 'TOURS' | translate }}">
+     <ion-content padding="'true'" class="has-header">
+
+         <div class="list">
+             <div class="item item-divider">
+                 {{ 'TOURS' | translate }} {{ 'FOR' | translate }} {{ 'TARGET_GROUPS' | translate }}
+             </div>
+             <a ng-repeat="target_group in target_groups.data | orderBy:'tid'" class="item item-icon-right item-thumbnail-left" href="#/app/tours/{{target_group.tid}}">
+                 <img ng-src="{{target_group.image}}">
+                 <h2 ng-bind-html="target_group.name"></h2>
+                 <p ng-bind-html="target_group.description"></p>
+                 <i class="icon ion-arrow-right-c"></i>
+             </a>
+         </div>
+  </ion-content>
+</ion-view>

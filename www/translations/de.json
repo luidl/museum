@@ -3,11 +3,15 @@
     "INFORMATIONS": "Informationen",
     "MAP": "Lageplan",
     "DEPARTMENTS": "Ausstellungen",
+    "TARGET_GROUPS": "Zielgruppen",
     "TOURS": "Führungen",
     "ROUTS": "Routen",
     "SCAN_EXHIBIT": "Scanne Exponat",
     "QUIZ": "Quiz",
     "EXHIBITS": "Exponate",
     "HOME": "Startseite",
-    "Change Language": "Sprache wechseln"
+    "Change Language": "Sprache wechseln",
+
+
+    "FOR": "für"
 }

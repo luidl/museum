@@ -62,6 +62,16 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
           }
       })
 
+     .state('app.target_groups', {
+          url: '/target_groups',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/target_groups.html',
+              controller: 'target_groupsCtrl'
+            }
+          }
+        })
+
        .state('app.exhibits', {
           url: '/exhibits',
           views: {
@@ -112,6 +122,26 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
       }
     })
 
+     .state('app.tours', {
+          url: '/tours/:target_groupId',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/tours.html',
+              controller: 'toursCtrl'
+            }
+          }
+        })
+
+    .state('app.tour', {
+      url: '/tour/:tourId',
+      views: {
+          'menuContent': {
+              templateUrl: 'templates/tour.html',
+              controller: 'tourCtrl'
+          }
+      }
+    })
+
       .state('app.news', {
           url: '/news',
           views: {
@@ -142,7 +172,7 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
           }
       })
 
-
+  
   .state('app.map', {
     url: '/map',
     views: {

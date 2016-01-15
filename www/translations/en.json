@@ -3,11 +3,15 @@
   "INFORMATIONS": "Informations",
   "MAP": "Map",
   "DEPARTMENTS": "Exhibitions",
+  "TARGET_GROUPS": "Target Groups",
   "TOURS": "Tours",
   "ROUTS": "Routs",
   "SCAN_EXHIBIT": "Scan Exhibit",
   "QUIZ": "Quiz",
   "EXHIBITS": "Exhibits",
   "HOME": "Home",
-  "Change Language": "Change Language"
+  "Change Language": "Change Language",
+
+
+    "FOR": "for"
 }

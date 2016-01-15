@@ -1,0 +1,12 @@
+<ion-view view-title="{{ 'TOURS' | translate }}">
+     <ion-content padding="'true'" class="has-header">
+        <h2>{{tour.title}}</h2>
+        <div class="item item-image">
+          <img ng-src="{{tour.image}}">
+          </div>
+
+          <a class="item" ng-bind-html="tour.description">
+          </a>
+
+  </ion-content>
+</ion-view>
