@@ -1,5 +1,19 @@
-<ion-view view-title="{{ 'SCANN_EXHIBIT' | translate }}">
+<ion-view view-title="{{ 'SCAN_EXHIBIT' | translate }}">
     <ion-content padding="'true'" class="has-header">
-        {{scan_result}}
+        <a class="mbutton" ng-click="scan()" id="scan">
+            <div class="home-icon">
+                <span class="icon-m icon-m-scan"></span>
+            </div>
+            {{ 'SCAN_EXHIBIT' | translate }}
+        </a>
+        <h2>{{ 'Last Scans' | translate }}</h2>
+        <div class="list">
+            <a class="item item-thumbnail-left" ng-repeat="exhibit in exhibits.exhibits | limitTo: 5" href="#/app/exhibits/{{exhibit.nid}}">
+                <img ng-if="exhibit.image" src="{{exhibit.image}}">
+                <img ng-if="!exhibit.image" src="img/default.png">
+                <h2>{{exhibit.titel}}</h2>
+                <p ng-bind-html="exhibit.text"></p>
+            </a>
+        </div>
     </ion-content>
 </ion-view>

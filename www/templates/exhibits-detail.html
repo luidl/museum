@@ -1,38 +1,44 @@
-<ion-view view-title="Exponat">
-  <ion-content padding="'true'" class="has-header">
-      <div class="list card">
+<ion-slide-box delegate-handle="info-viewer">
+    <ion-slide>
+        <ion-content>
+            <div class="list card">
 
-          <div class="item">
-              <h2>{{exhibit.titel}}</h2>
-          </div>
+                <div class="item">
+                    <h2>{{exhibit.titel}}</h2>
+                </div>
 
-          <div class="item item-image">
-              <img ng-src="{{exhibit.image}}">
-          </div>
+                <div class="item item-image">
+                    <img ng-src="{{exhibit.image}}">
+                </div>
 
-          <a class="item">
-              {{exhibit.text}}
-          </a>
+                <div ng-bind-html="exhibit.text" class="item item-text-wrap">
 
-      </div>
-      <h2 ng-if="sub_exhibits.length > 0">Weitere Informationen</h2>
+                </div>
 
-      <div class="list card" ng-repeat="sub in sub_exhibits">
+            </div>
+        </ion-content>
+    </ion-slide>
+    <ion-slide ng-repeat="sub in sub_exhibits">
+        <ion-content>
+            <ion-scrol style="height:100%">
 
-          <div class="item">
-              <h2>{{sub.title}}</h2>
-              <p>{{sub.field_exhibit_description_short}}</p>
-          </div>
+                <div class="list card">
 
-          <div class="item item-image">
-              <img ng-src="{{sub.field_exhibit_image}}">
-          </div>
+                    <div class="item">
+                        <h2>{{sub.title}}</h2>
+                        <p>{{sub.field_exhibit_description_short}}</p>
+                    </div>
 
-          <a class="item item-text-wrap">
-              <p ng-bind-html="sub.field_exhibit_description"></p>
-          </a>
+                    <div class="item item-image">
+                        <img ng-src="{{sub.field_exhibit_image}}">
+                    </div>
 
-      </div>
+                    <div class="item item-text-wrap">
+                        <p ng-bind-html="sub.field_exhibit_description"></p>
+                    </div>
+                </div>
+            </ion-scrol>
+        </ion-content>
+    </ion-slide>
 
-   </ion-content>
-</ion-view>
+</ion-slide-box>

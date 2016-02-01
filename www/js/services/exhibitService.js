@@ -28,15 +28,14 @@ angular.module("museum")
             exhibits = storageService.loadData('exhibits', {
               update_function: service_object.reloadData
             });
-            console.log("Exponate", exhibits.exhibits);
-          return exhibits;
+            return exhibits;
         };
 
         /**
          * Get Exhibits By  ID
          */
         service_object.getExhibitsById = function(id) {
-
+            service_object.getExhibits();
             var output = {};
             angular.forEach(exhibits.exhibits, function(value, key) {
                 if(value.nid == id) {

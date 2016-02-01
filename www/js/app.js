@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function($ionicPlatform, $state, visitorService) {
+.run(function($ionicPlatform, $state, $ionicLoading, $rootScope, visitorService, preloadService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -23,6 +23,8 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
       if(!visitorService.getLanguage()) {
           $state.go("app.language-selector");
       }
+
+      preloadService.run();
 
   });
 })
@@ -47,7 +49,8 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
         url: '/start',
         views: {
           'menuContent': {
-            templateUrl: 'templates/start.html'
+            templateUrl: 'templates/start.html',
+            controller: 'startCtrl'
           }
         }
       })

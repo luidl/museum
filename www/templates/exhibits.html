@@ -5,11 +5,11 @@
                 on-refresh="doRefresh()">
         </ion-refresher>-->
             <div class="list">
-                <a class="item item-thumbnail-left" ng-repeat="exhibit in exhibits.exhibits | orderBy:'title'" href="#/app/exhibits/{{exhibit.nid}}">
+                <a class="item item-thumbnail-left item-text-wrap" ng-repeat="exhibit in exhibits.exhibits | orderBy:'title'" href="#/app/exhibits/{{exhibit.nid}}">
                     <img ng-if="exhibit.image" src="{{exhibit.image}}">
                     <img ng-if="!exhibit.image" src="img/default.png">
                     <h2>{{exhibit.titel}}</h2>
-                    <p>{{exhibit.text}}</p>
+                    <p ng-bind-html="exhibit.text"></p>
                 </a>
             </div>
    </ion-content>

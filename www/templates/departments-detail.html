@@ -4,7 +4,7 @@
              <a class="item item-thumbnail-left" ng-repeat="exhibit in exhibits.exhibits | filter: { department_id: department_id }" href="#/app/exhibits/{{exhibit.nid}}">
                  <img src="{{exhibit.image}}">
                  <h2>{{exhibit.titel}}</h2>
-                 <p>{{exhibit.text}}</p>
+                 <p ng-bind-html="exhibit.text"></p>
              </a>
          </div>
   </ion-content>

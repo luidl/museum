@@ -15,7 +15,7 @@ angular.module("museum")
           $http.get(serverAddress + restEndpoint + '/departments' + visitorService.getLanguageUrl())
             .success(function(data) {
                 departments.data = data;
-                storageService.saveData('exhibits', departments);
+                storageService.saveData('departments', departments);
                 $rootScope.$broadcast('scroll.refreshComplete');
             });
         };
