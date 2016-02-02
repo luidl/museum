@@ -1,6 +1,15 @@
 <ion-view view-title="{{ 'QUIZ' | translate }}">
     <ion-content padding="'true'" class="has-header">
 
+        <div class="list" ng-if="noquiz.questions > 0">
+
+            <div class="item item-icon-right item-text-wrap">
+                {{ 'You did some Questions druring your visit' | translate }}
+                <a class="button button-block button-dark" href="#/app/noquizquestion">{{ 'Show my Highscore' | translate }}</a>
+            </div>
+
+        </div>
+
         <div class="list">
             <div class="item item-divider">
                 {{ 'Different Quiz to choose' | translate }}

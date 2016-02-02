@@ -15,6 +15,16 @@
 
                 </div>
 
+
+
+
+            </div>
+
+            <div class="list card" ng-if="exhibit.question">
+                <div class="item">
+                    <h2>{{ 'There is a Question' | translate}}</h2>
+                    <button class="button button-block button-dark" ng-click="gotoQuestion()">{{ 'Go to Question' | translate}}</button>
+                </div>
             </div>
         </ion-content>
     </ion-slide>
@@ -40,5 +50,15 @@
             </ion-scrol>
         </ion-content>
     </ion-slide>
+
+    <ion-slide ng-if="exhibit.question">
+        <ion-content>
+            <ion-scrol style="height:100%">
+                <h1>Eine Quizfrage zu dieser Station</h1>
+                <question-display   question-id="exhibit.question"></question-display>
+            </ion-scrol>
+        </ion-content>
+    </ion-slide>
+
 
 </ion-slide-box>

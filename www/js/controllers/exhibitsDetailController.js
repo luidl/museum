@@ -13,6 +13,12 @@ angular.module('museum.controllers')
         $ionicSlideBoxDelegate.$getByHandle('info-viewer').update();
     });
 
+    $scope.gotoQuestion = function() {
+        var slides_number = $ionicSlideBoxDelegate.slidesCount();
+        console.log("SLIDES: ", slides_number);
+        $ionicSlideBoxDelegate.slide(slides_number-1);
+    }
+
 
 
 

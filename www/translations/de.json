@@ -6,7 +6,7 @@
     "TARGET_GROUPS": "Zielgruppen",
     "TOURS": "Führungen",
     "ROUTS": "Routen",
-    "SCAN_EXHIBIT": "Scanne Exponat",
+    "SCAN_EXHIBIT": "Scanne Aktion",
     "QUIZ": "Quiz",
     "EXHIBITS": "Exponate",
     "HOME": "Startseite",
@@ -14,11 +14,16 @@
     "Last Scans": "Die letzten Scans",
     "Different Quiz to choose": "Verschiedene Quiz zur Auswahl",
     "CHECK": "Antwort absenden",
-    "Answer": "Anwtwort",
+    "Answer": "Antwort",
     "RIGHT ANSWER": "Juhu, die Antwort ist richtig!",
     "NOT CORRECT ANSWER": "Oh die Antwort ist leider falsch. Noch ein Versuch!",
     "NOT CORRECT ANSWER WITH RESULT": "Schade schon wieder falsch. Die richtige Antwort ist Antwort ",
     "Next": "Weiter",
+    "There is a Question": "Es gibt eine Quizfrage zu dieser Station",
+    "Go to Question": "Frage Beantworten",
+    "You did some Questions druring your visit": "Du hast Fragen während deines Besuchs im Museum beantwortet.",
+    "Show my Highscore": "Zeige meinen Highscore",
+
 
     "FOR": "für"
 }

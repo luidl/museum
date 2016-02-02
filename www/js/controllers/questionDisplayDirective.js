@@ -1,5 +1,5 @@
 angular.module("museum.controllers")
-.directive("questionDisplay", function($timeout) {
+.directive("questionDisplay", function($timeout, noQuizQuestionService, $state, $ionicHistory) {
     return {
         restrict: "E",
         templateUrl: "templates/questions-display.html",
@@ -83,8 +83,31 @@ angular.module("museum.controllers")
             }
 
             $scope.next = function() {
-                $scope.quiz.correct = $scope.right;
-                $scope.quiz.trys = $scope.trys;
+                if($scope.quiz) {
+                    $scope.quiz.correct = $scope.right;
+                    $scope.quiz.trys = $scope.trys;
+                } else {
+                    if($scope.right) {
+                        noQuizQuestionService.addCorrect();
+                    } else {
+                        noQuizQuestionService.addFail();
+                    }
+
+                    noQuizQuestionService.addTrys($scope.trys);
+
+                }
+
+                if(typeof $scope.readyCallback === "function" ) {
+                    $scope.readyCallback();
+                } else {
+                    //Default Behaviour back to Start Page
+
+                    $state.go("app.start");
+                    $ionicHistory.clearHistory();
+                    $ionicHistory.nextViewOptions({
+                        disableBack: true
+                    });
+                }
             }
 
         }

@@ -19,7 +19,7 @@
              </div>
              <a ng-repeat="department in departments.data | filter: {typ: '!schedule'}" class="item item-icon-right item-thumbnail-left item-text-wrap" href="#/app/departments/{{department.tid}}">
                  <img ng-src="{{department.image}}">
-                 <h2>{{department.name}}</h2>
+                 <h2 ng-bind-html="department.name"></h2>
                  <p ng-bind-html="department.description"></p>
                  <i class="icon ion-arrow-right-c"></i>
              </a>

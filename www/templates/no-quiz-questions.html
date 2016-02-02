@@ -1,0 +1,33 @@
+<ion-view view-title="{{ 'QUESTION' | translate }}">
+    <ion-content padding="'true'" class="has-header">
+        <p>Du hast während deines Besuches Fragen beantwortet. Hier ist eine Übersicht.</p>
+
+        <div class="row">
+            <div class="col">
+                <h2>Richtig</h2>
+                <div class="item item-balanced" ng-style="correctStyle">
+                    {{ results.correct }}
+                </div>
+            </div>
+            <div class="col">
+                <h2>Falsch</h2>
+                <div class="item item-assertive" ng-style="failStyle">
+                    {{ results.fails }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="item item-dark">
+                    {{ getQuestionsCorrect() }}
+                    {{ results.questions }} Fragen gesamt<br />
+                    Richtig: {{ results.correct }}<br />
+                    Falsch: {{ results.fails }}<br />
+                    mit {{ results.trys }} Versuchen.<br/>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

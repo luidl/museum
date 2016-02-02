@@ -36,11 +36,20 @@ angular.module('museum.controllers')
         $cordovaBarcodeScanner.scan().then(function (imageData) {
             var code = imageData.text;
             $scope.scan_result = code;
-            code = code.replace('scan-exhibit:', '');
-            scanExhibit.saveToArray(code);
-            storageService.saveData('exhibit_scans', $scope.exhibits);
 
-            $state.go("app.exhibits-detail", {exhibitId: code});
+            if(code.search("exhibit") > 0) {
+                code = code.replace('scan-exhibit:', '');
+                scanExhibit.saveToArray(code);
+                storageService.saveData('exhibit_scans', $scope.exhibits);
+
+                $state.go("app.exhibits-detail", {exhibitId: code});
+            }
+
+            if(code.search("question") > 0) {
+                code = code.replace('scan-question:', '');
+                $state.go("app.question", {questionId: code});
+            }
+
 
 
 

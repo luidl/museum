@@ -2,9 +2,8 @@ angular.module('museum.controllers')
 
     .controller("quizDetailCtrl", function($scope, $stateParams, quizService, questionService) {
 
-       $scope.quiz_id = $stateParams.quizId;
+        $scope.quiz_id = $stateParams.quizId;
         $scope.quiz = quizService.getQuizById($scope.quiz_id);
-        console.log("QUIZ TITLE", $scope.quiz);
 
         var question_ids = $scope.quiz.questions.split(",");
 
