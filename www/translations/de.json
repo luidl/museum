@@ -12,7 +12,13 @@
     "HOME": "Startseite",
     "Change Language": "Sprache wechseln",
     "Last Scans": "Die letzten Scans",
-
+    "Different Quiz to choose": "Verschiedene Quiz zur Auswahl",
+    "CHECK": "Antwort absenden",
+    "Answer": "Anwtwort",
+    "RIGHT ANSWER": "Juhu, die Antwort ist richtig!",
+    "NOT CORRECT ANSWER": "Oh die Antwort ist leider falsch. Noch ein Versuch!",
+    "NOT CORRECT ANSWER WITH RESULT": "Schade schon wieder falsch. Die richtige Antwort ist Antwort ",
+    "Next": "Weiter",
 
     "FOR": "für"
 }

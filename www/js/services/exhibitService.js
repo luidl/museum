@@ -40,7 +40,6 @@ angular.module("museum")
             angular.forEach(exhibits.exhibits, function(value, key) {
                 if(value.nid == id) {
                     output = value;
-                    console.log("VALUE: ", value);
 
                     return;
                 }

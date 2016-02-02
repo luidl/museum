@@ -175,6 +175,26 @@ angular.module('museum', ['ionic', 'museum.controllers', 'pascalprecht.translate
           }
       })
 
+      .state('app.quiz', {
+          url: '/quiz',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/quiz.html',
+                  controller: 'quizCtrl'
+              }
+          }
+      })
+
+      .state('app.quiz-detail', {
+          url: '/quiz/:quizId',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/quiz-detail.html',
+                  controller: 'quizDetailCtrl'
+              }
+          }
+      })
+
   
   .state('app.map', {
     url: '/map',

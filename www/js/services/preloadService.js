@@ -6,7 +6,7 @@ angular.module("museum")
 
         var private_object = {};
 
-        var number_of_requests = 2;
+        var number_of_requests = 3;
         var ready_loaded = 0;
 
         /**
@@ -61,6 +61,28 @@ angular.module("museum")
         }
 
         /**
+         * Load the Data for Questions
+         */
+        private_object.loadQuestions = function () {
+            var output = storageService.loadData('questions', {
+                update_function: function () {
+                    $http.get(serverAddress + restEndpoint + '/questions' + visitorService.getLanguageUrl())
+                        .success(function (data) {
+                            var questions = { questions: data };
+                            storageService.saveData('questions', questions);
+                            ready_loaded++;
+                            private_object.isLoadComplete();
+                        });
+                }
+            });
+
+            if(angular.isObject(output)) {
+                ready_loaded++;
+                private_object.isLoadComplete();
+            }
+        }
+
+        /**
          * Check if Load is complete
          */
         private_object.isLoadComplete = function() {
@@ -85,6 +107,7 @@ angular.module("museum")
 
             private_object.leadDepartments();
             private_object.loadExhibits();
+            private_object.loadQuestions();
         }
 
 
